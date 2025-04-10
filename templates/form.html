@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora KBRITÃO Pro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚛 Calculadora KBRITÃO Pro</h1>
+        <form method="post" action="/resultado">
+            <div>
+                <label>Tipo de Carga:</label>
+                <select name="tipo_carga">
+                    <option value="Gado">Gado</option>
+                    <option value="Grãos">Grãos</option>
+                    <option value="Carne Refrigerada">Carne Refrigerada</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Tipo de Caminhão:</label>
+                <select name="tipo_caminhao">
+                    <option value="VUC">VUC / 3⁄4</option>
+                    <option value="Toco">Toco</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Cavalo 2 eixos">Cavalo mecânico 2 eixos</option>
+                    <option value="Cavalo 3 eixos">Cavalo mecânico 3 eixos</option>
+                </select>
+            </div>
+
+            <div><label>Origem:</label><input type="text" name="origem"></div>
+            <div><label>Destino:</label><input type="text" name="destino"></div>
+            <div><label>Distância estimada (km):</label><input type="number" step="0.1" name="distancia_km"></div>
+            <div><label>Valor da carga (R$):</label><input type="number" step="0.01" name="valor_carga"></div>
+            <div><label>Preço do Diesel (R$):</label><input type="number" step="0.01" name="preco_diesel"></div>
+            <div><label>Preço do ARLA 32 (R$):</label><input type="number" step="0.01" name="preco_arla"></div>
+            <div><label>Dias de viagem:</label><input type="number" name="dias_viagem"></div>
+            <div><label>Lucro desejado (%):</label><input type="number" step="0.01" name="lucro_percentual"></div>
+
+            <button type="submit">Calcular Frete</button>
+        </form>
+
+        <div class="footer-link">
+            <a href="/licencas">📄 Licenças obrigatórias CT-e e MDF-e (MS)</a>
+        </div>
+    </div>
+</body>
+</html>
